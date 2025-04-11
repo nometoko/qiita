@@ -44,7 +44,7 @@ Connection closed by UNKNOWN port 65535
 
 # やったこと
 
-zsh の設定をいじることがあったので、そのせいかな？と思い、下記を実行。
+`zsh` の設定をいじることがあったので、そのせいかな？と思い、下記を実行。
 
 ```shell
 % zsh --no-rcs
@@ -79,7 +79,7 @@ Connection closed by UNKNOWN port 65535
 ```
 
 これらはすべて、私の`~/.zshenv`で設定しているものである。
-ちなみに、`exit`して元の zsh に戻ると`$PATH`は元通りになっている。
+ちなみに、`exit`して元の `zsh` に戻ると`$PATH`は元通りになっている。
 
 ## ここまでのまとめ
 
@@ -106,9 +106,9 @@ Connection closed by UNKNOWN port 65535
 # 考察
 
 なぜこのようなことがおきたのだろうか？
-そもそも、`zshenv`は zsh の設定ファイルの中で最初に読まれる設定ファイルのため、上書きしても元の`$PATH`が空なので問題ないはずである。
+そもそも、`zshenv`は `zsh` の設定ファイルの中で最初に読まれる設定ファイルのため、上書きしても元の`$PATH`が空なので問題ないはずである。
 
-## zsh の設定ファイルと`$PATH`の設定
+## `zsh` の設定ファイルと`$PATH`の設定
 
 ### 設定ファイルの読み込み順
 
@@ -121,7 +121,7 @@ Connection closed by UNKNOWN port 65535
 > [中略] \
 > If **ZDOTDIR** is unset, **HOME** is used instead. Files listed above as being in /etc may be in another directory, depending on the installation.
 
-要するに、`$ZDODIR`が設定されていない私のような環境では、zsh を立ち上げた時以下の順で設定ファイルが読み込まれる。
+要するに、`$ZDODIR`が設定されていない私のような環境では、`zsh` を立ち上げた時以下の順で設定ファイルが読み込まれる。
 
 | 順番 | 設定ファイル名  | 備考                                      |
 | ---- | --------------- | ----------------------------------------- |
@@ -163,7 +163,7 @@ Connection closed by UNKNOWN port 65535
 - `~/.zprofile`
   - `~/.zshenv`と同様、MacPorts 関係の設定をしている。
 
-### zsh から zsh を立ち上げた時の挙動
+### `zsh` から `zsh` を立ち上げた時の挙動
 
 ここまででこの記事で何を言いたいのか分かってきたと思うが、**`zshenv`を$PATH 上書き方式にした時に**`zsh`を立ち上げた時の挙動を確認しておこう。
 まず、ログインシェルを立ち上げた時には、上の 3 つの設定ファイルの`$PATH`が問題なく読み込まれる。
