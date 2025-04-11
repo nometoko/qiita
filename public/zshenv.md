@@ -4,7 +4,7 @@ tags:
   - Zsh
   - SSH
 private: false
-updated_at: '2025-03-29T21:42:32+09:00'
+updated_at: '2025-04-12T03:25:40+09:00'
 id: 0919e7c157e21409bf47
 organization_url_name: null
 slide: false
